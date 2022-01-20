@@ -75,7 +75,7 @@ class _PointPageState extends State<PointPage> {
               Container(
                 alignment : Alignment.center,
                 margin: EdgeInsets.only(left: 15, right: 15),
-                width: 350,
+                width: 150,
                 height: 43,
                 decoration: BoxDecoration(
                   color: Color(0xFFF9F9F9),
@@ -205,27 +205,31 @@ class _PointPageState extends State<PointPage> {
                           child: Row(
                             children: [
                               InkWell(
-                                onTap:(){},
+                                onTap:(){
+                                  Get.to(MainPage());
+                                },
                                 child: Container(
-                                  padding: EdgeInsets.all(15),
-                                  margin: EdgeInsets.only(top:1,bottom:1),
+                                  padding: EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
-                                    color:Colors.white,
+                                    color:Color(0xFF3B4E84),
                                   ),
                                   child: Center(
                                     child: Text('고객관리',
                                       style: TextStyle(
                                         fontSize:16,
-                                        fontFamily: 'NanumSquareB',
+                                        fontFamily: 'NanumSquareR',
+                                        color:Colors.white,
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
                               InkWell(
-                                onTap:(){},
+                                onTap:(){
+                                  Get.to(PartnerPage());
+                                },
                                 child: Container(
-                                  padding: EdgeInsets.all(15.0),
+                                  padding: EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
                                     color:Color(0xFF3B4E84),
                                   ),
@@ -241,18 +245,20 @@ class _PointPageState extends State<PointPage> {
                                 ),
                               ),
                               InkWell(
-                                onTap:(){},
+                                onTap:(){
+                                  Get.to(PointPage());
+                                },
                                 child: Container(
-                                  padding: EdgeInsets.all(15.0),
+                                  padding: EdgeInsets.all(10),
+                                  margin: EdgeInsets.only(top:1,bottom:1),
                                   decoration: BoxDecoration(
-                                    color:Color(0xFF3B4E84),
+                                    color:Colors.white,
                                   ),
                                   child: Center(
                                     child: Text('포인트 관리',
                                       style: TextStyle(
                                         fontSize:16,
-                                        fontFamily: 'NanumSquareR',
-                                        color:Colors.white,
+                                        fontFamily: 'NanumSquareB',
                                       ),
                                     ),
                                   ),
@@ -263,7 +269,7 @@ class _PointPageState extends State<PointPage> {
                                   Get.to(SettingPage());
                                 },
                                 child: Container(
-                                  padding: EdgeInsets.all(15.0),
+                                  padding: EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
                                     color:Color(0xFF3B4E84),
                                   ),
@@ -291,7 +297,7 @@ class _PointPageState extends State<PointPage> {
                             top: MediaQuery.of(context).size.width / 70,
                             bottom: MediaQuery.of(context).size.width / 70,
                           ),
-                          child: Text('고객 회원 관리',
+                          child: Text('포인트 관리',
                             style:TextStyle(
                               fontFamily: 'NanumSquareEB',
                               fontSize:18,
@@ -320,7 +326,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('기간',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -351,7 +357,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('전체 회원 수',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -382,7 +388,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('회원가입',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -413,7 +419,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('회원탈퇴',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -455,7 +461,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('2021년 7월',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -482,7 +488,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('40,789명',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -509,7 +515,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('120명',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -536,7 +542,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('13명',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -559,14 +565,13 @@ class _PointPageState extends State<PointPage> {
                             decoration: BoxDecoration(
                               color:Color(0xFFD8DCE6),
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
                               children: [
                                 Row(
                                   children: [
                                     Container(
-                                      width:80,
-                                      height:40,
+                                      padding:EdgeInsets.all(10),
                                       decoration: BoxDecoration(
                                           color:Colors.white,
                                           borderRadius: BorderRadius.circular(5),
@@ -798,20 +803,22 @@ class _PointPageState extends State<PointPage> {
 
                                               InkWell(
                                                 onTap: () => _selectDate2(context),
-                                                child: Row(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: <Widget>[
-                                                    Container(
-                                                      child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:17,),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 15.0,
-                                                    ),
-                                                    Text(
-                                                      "${selectedDate2.toLocal()}".split(' ')[0],
-                                                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                                                    ),
-                                                  ],
+                                                child: Container(
+                                                  child: Row(
+                                                    mainAxisSize: MainAxisSize.min,
+                                                    children: <Widget>[
+                                                      Container(
+                                                        child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:17,),
+                                                      ),
+                                                      SizedBox(
+                                                        width: 15.0,
+                                                      ),
+                                                      Text(
+                                                        "${selectedDate2.toLocal()}".split(' ')[0],
+                                                        style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
 
@@ -827,8 +834,8 @@ class _PointPageState extends State<PointPage> {
                                     InkWell(
                                       onTap:(){},
                                       child: Container(
-                                        width:60,
-                                        height:40,
+                                        width:50,
+                                        height:35,
                                         decoration:BoxDecoration(
                                           color:Color(0xFF506AB4),
                                           borderRadius: BorderRadius.circular(5),
@@ -851,7 +858,7 @@ class _PointPageState extends State<PointPage> {
                                       },
                                       child: Container(
                                         width:100,
-                                        height:40,
+                                        height:35,
                                         decoration:BoxDecoration(
                                           color:Color(0xFF506AB4),
                                           borderRadius: BorderRadius.circular(5),
@@ -897,7 +904,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('번호',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -929,7 +936,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('이름',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -961,7 +968,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('휴대폰번호',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -993,7 +1000,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('예약횟수',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -1025,7 +1032,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('성별',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -1057,7 +1064,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('가입일',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -1089,7 +1096,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('관리',
                                       style:TextStyle(
-                                        fontSize:16,
+                                        fontSize:14,
                                         fontFamily: 'NanumSquareB',
                                       ),
                                     ),
@@ -1132,7 +1139,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('10',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -1160,7 +1167,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('김성수',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -1188,7 +1195,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('010-5555-4444',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -1216,7 +1223,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('22',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -1244,7 +1251,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('여자',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -1272,7 +1279,7 @@ class _PointPageState extends State<PointPage> {
                                   child: Center(
                                     child: Text('2022-01-01',
                                       style:TextStyle(
-                                        fontSize:15,
+                                        fontSize:12,
                                         fontFamily: 'NanumSquareR',
                                       ),
                                     ),
@@ -1305,33 +1312,33 @@ class _PointPageState extends State<PointPage> {
                                         InkWell(
                                           onTap:(){},
                                           child: Container(
-                                            width:70,
-                                            height:30,
+                                            width:25,
+                                            height:20,
                                             decoration:BoxDecoration(
                                                 borderRadius: BorderRadius.circular(5),
                                                 color:Color(0xFF656565)
                                             ),
                                             child: Center(child: Text('수정',
                                               style:TextStyle(
-                                                fontSize:14,
+                                                fontSize:9,
                                                 color:Colors.white,
                                               ),
                                             )),
                                           ),
                                         ),
-                                        SizedBox(width:10),
+                                        SizedBox(width:5),
                                         InkWell(
                                           onTap:(){},
                                           child: Container(
-                                            width:70,
-                                            height:30,
+                                            width:25,
+                                            height:20,
                                             decoration:BoxDecoration(
                                                 borderRadius: BorderRadius.circular(5),
                                                 color:Color(0xFF656565)
                                             ),
                                             child: Center(child: Text('삭제',
                                               style: TextStyle(
-                                                fontSize:14,
+                                                fontSize:10,
                                                 color:Colors.white,
                                               ),
                                             )),
