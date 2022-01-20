@@ -862,7 +862,7 @@ class _MainPageState extends State<MainPage> {
                                         borderRadius: BorderRadius.circular(5),
                                       ),
                                       child: Center(
-                                        child: Text('검색 초기화',
+                                        child: Text('검색 초기2화',
                                             style:TextStyle(
                                               color:Colors.white,
                                               fontFamily: 'NanumSquareR',
@@ -2011,7 +2011,9 @@ class _MainPageState extends State<MainPage> {
                                   SizedBox(width:10),
                                   InkWell(
                                     onTap:(){
-
+                                      setState(() {
+                                        myController.selectAt(0);
+                                      });
                                     },
                                     child: Container(
                                       width:100,
