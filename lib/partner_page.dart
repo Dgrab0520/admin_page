@@ -566,316 +566,307 @@ class _PartnerPageState extends State<PartnerPage> {
                             child: ListView(
                               scrollDirection: Axis.horizontal,
                               children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding:EdgeInsets.all(10),
-                                          decoration: BoxDecoration(
-                                              color:Colors.white,
-                                              borderRadius: BorderRadius.circular(5),
-                                              border: Border.all(
-                                                width:1,
-                                                color:Color(0xFFcccccc),
-                                              )
-                                          ),
-                                          child: Center(
-                                            child: Text('통합검색',
-                                              style:TextStyle(
-                                                fontSize:13,
-                                                fontFamily: 'NanumSquareB',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          alignment : Alignment.center,
-                                          margin: EdgeInsets.only(left: 5, right: 15),
-                                          width: 150,
-                                          height: 40,
-                                          decoration: BoxDecoration(
-                                            color: Color(0xFFffffff),
-                                            border: Border.all(
-                                              width: 1.0,
-                                              color: Color(0xFFcccccc),
-                                            ),
-                                            borderRadius: BorderRadius.circular(5),
-                                          ),
-                                          child: TextField(
-                                            keyboardType: TextInputType.text,
-                                            onChanged: (text) { },
-                                            decoration: InputDecoration(
-                                              border: InputBorder.none,
-                                              contentPadding: EdgeInsets.only(
-                                                bottom: 8,
-                                                left:5,// HERE THE IMPORTANT PART
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(width:10),
-                                        Container(
-                                          width:80,
-                                          height:40,
-                                          decoration: BoxDecoration(
-                                              color:Colors.white,
-                                              borderRadius: BorderRadius.circular(5),
-                                              border: Border.all(
-                                                width:1,
-                                                color:Color(0xFFcccccc),
-                                              )
-                                          ),
-                                          child: Center(
-                                            child: Text('이용횟수',
-                                              style:TextStyle(
-                                                fontSize:13,
-                                                fontFamily: 'NanumSquareB',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(width:5),
-                                        Container(
-                                          width: 120,
-                                          height: 40,
-                                          decoration:BoxDecoration(
-                                              color:Colors.white,
-                                              borderRadius: BorderRadius.circular(5),
-                                              border:Border.all(
-                                                width:1,
-                                                color:Color(0xFFcccccc),
-                                              )
-                                          ),
-                                          child: Form(
-                                            key: _formKey,
-                                            child: DropdownButtonFormField2(
-                                              decoration: InputDecoration(
-                                                contentPadding: EdgeInsets.zero,
-                                                border: InputBorder.none,
-                                                //Add more decoration as you want here
-                                                //Add label If you want but add hint outside the decoration to be aligned in the button perfectly.
-                                              ),
-                                              isExpanded: true,
-                                              hint: Row(
-                                                children: [
-                                                  Text(
-                                                    '전체',
-                                                    style: TextStyle(
-                                                      fontSize: 12,
-                                                      color:Colors.black,
-                                                      fontFamily: 'NanumSquareR',
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              icon: const Icon(
-                                                Icons.arrow_drop_down,
-                                                color: Color(0xFFcccccc),
-                                              ),
-                                              iconSize: 30,
-                                              buttonHeight: 45,
-                                              buttonPadding: const EdgeInsets.only(left: 20, right: 10,bottom:10),
-                                              dropdownDecoration: BoxDecoration(
-                                                color:Colors.white,
-                                              ),
-                                              items: map
-                                                  .map((item) => DropdownMenuItem<String>(
-                                                value: item,
-                                                child: Text(
-                                                  item,
-                                                  style: const TextStyle(
-                                                    fontSize: 13,
-                                                  ),
-                                                ),
-                                              ))
-                                                  .toList(),
-                                              validator: (value) {
-                                                if (value == null) {
-                                                  return '지역을 골라주세요.';
-                                                }
-                                              },
-                                              onChanged: (value) {
-                                                if (value == "글쓰기") {
-
-                                                } else if (value == "구독정보") {
-
-                                                }
-                                                //Do something when changing the item if you want.
-                                              },
-                                              onSaved: (value) {
-                                                selectedValue = value.toString();
-                                              },
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(width:25),
-                                        Container(
-                                          width:80,
-                                          height:40,
-                                          decoration: BoxDecoration(
-                                              color:Colors.white,
-                                              borderRadius: BorderRadius.circular(5),
-                                              border: Border.all(
-                                                width:1,
-                                                color:Color(0xFFcccccc),
-                                              )
-                                          ),
-                                          child: Center(
-                                            child: Text('회원상태',
-                                              style:TextStyle(
-                                                fontSize:13,
-                                                fontFamily: 'NanumSquareB',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-
-                                        SizedBox(width:5),
-
-                                        RadioGroup(
-                                          controller: myController,
-                                          values: ["전체", "남자", "여자"],
-                                          indexOfDefault: 0,
-                                          orientation: RadioGroupOrientation.Horizontal,
-                                          decoration: RadioGroupDecoration(
-                                            spacing: 5.0,
-                                            labelStyle: TextStyle(
-                                              color: Colors.black,
-                                            ),
-                                            activeColor: Color(0xFF3B4E84),
-                                          ),
-                                        ),
-                                        SizedBox(width:15),
-
-                                        Container(
-                                          width:60,
-                                          height:40,
-                                          decoration: BoxDecoration(
-                                              color:Colors.white,
-                                              borderRadius: BorderRadius.circular(5),
-                                              border: Border.all(
-                                                width:1,
-                                                color:Color(0xFFcccccc),
-                                              )
-                                          ),
-                                          child: Center(
-                                            child: Text('가입일',
-                                              style:TextStyle(
-                                                fontSize:13,
-                                                fontFamily: 'NanumSquareB',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-
-                                        Row(
-                                          children: [
-                                            Container(
-                                              padding: EdgeInsets.symmetric(horizontal: 20.0),
-                                              child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                  InkWell(
-                                                    onTap: () => _selectDate(context),
-                                                    child: Row(
-                                                      mainAxisSize: MainAxisSize.min,
-                                                      children: <Widget>[
-                                                        Container(
-                                                          child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:17,),
-                                                        ),
-                                                        SizedBox(
-                                                          width: 15.0,
-                                                        ),
-                                                        Text(
-                                                          "${selectedDate.toLocal()}".split(' ')[0],
-                                                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-
-                                                  SizedBox(width: 20.0,),
-
-                                                  Text('~'),
-
-                                                  SizedBox(width: 20.0,),
-
-                                                  InkWell(
-                                                    onTap: () => _selectDate2(context),
-                                                    child: Container(
-                                                      child: Row(
-                                                        mainAxisSize: MainAxisSize.min,
-                                                        children: <Widget>[
-                                                          Container(
-                                                            child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:17,),
-                                                          ),
-                                                          SizedBox(
-                                                            width: 15.0,
-                                                          ),
-                                                          Text(
-                                                            "${selectedDate2.toLocal()}".split(' ')[0],
-                                                            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
+                                Container(
+                                  padding:EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                      color:Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+                                      border: Border.all(
+                                        width:1,
+                                        color:Color(0xFFcccccc),
+                                      )
+                                  ),
+                                  child: Center(
+                                    child: Text('통합검색',
+                                      style:TextStyle(
+                                        fontSize:12,
+                                        fontFamily: 'NanumSquareB',
+                                      ),
                                     ),
-                                    Row(
-                                      children: [
-                                        InkWell(
-                                          onTap:(){},
-                                          child: Container(
-                                            width:50,
-                                            height:35,
-                                            decoration:BoxDecoration(
-                                              color:Color(0xFF506AB4),
-                                              borderRadius: BorderRadius.circular(5),
-                                            ),
-                                            child: Center(
-                                              child: Text('검색',
-                                                  style:TextStyle(
-                                                    color:Colors.white,
-                                                    fontFamily: 'NanumSquareR',
-                                                    fontSize:14,
-                                                  )
-                                              ),
+                                  ),
+                                ),
+                                Container(
+                                  alignment : Alignment.center,
+                                  margin: EdgeInsets.only(left: 5, right: 15),
+                                  width: 100,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFffffff),
+                                    border: Border.all(
+                                      width: 1.0,
+                                      color: Color(0xFFcccccc),
+                                    ),
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                  child: TextField(
+                                    keyboardType: TextInputType.text,
+                                    onChanged: (text) { },
+                                    decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      contentPadding: EdgeInsets.only(
+                                        bottom: 8,
+                                        left:5,// HERE THE IMPORTANT PART
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width:10),
+                                Container(
+                                  width:60,
+                                  height:40,
+                                  decoration: BoxDecoration(
+                                      color:Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+                                      border: Border.all(
+                                        width:1,
+                                        color:Color(0xFFcccccc),
+                                      )
+                                  ),
+                                  child: Center(
+                                    child: Text('이용횟수',
+                                      style:TextStyle(
+                                        fontSize:12,
+                                        fontFamily: 'NanumSquareB',
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width:5),
+                                Container(
+                                  width: 100,
+                                  height: 40,
+                                  decoration:BoxDecoration(
+                                      color:Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+                                      border:Border.all(
+                                        width:1,
+                                        color:Color(0xFFcccccc),
+                                      )
+                                  ),
+                                  child: Form(
+                                    key: _formKey,
+                                    child: DropdownButtonFormField2(
+                                      decoration: InputDecoration(
+                                        contentPadding: EdgeInsets.zero,
+                                        border: InputBorder.none,
+                                        //Add more decoration as you want here
+                                        //Add label If you want but add hint outside the decoration to be aligned in the button perfectly.
+                                      ),
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: [
+                                          Text(
+                                            '전체',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color:Colors.black,
+                                              fontFamily: 'NanumSquareR',
                                             ),
                                           ),
+                                        ],
+                                      ),
+                                      icon: const Icon(
+                                        Icons.arrow_drop_down,
+                                        color: Color(0xFFcccccc),
+                                      ),
+                                      iconSize: 30,
+                                      buttonHeight: 45,
+                                      buttonPadding: const EdgeInsets.only(left: 20, right: 10,bottom:10),
+                                      dropdownDecoration: BoxDecoration(
+                                        color:Colors.white,
+                                      ),
+                                      items: map
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 13,
+                                          ),
                                         ),
-                                        SizedBox(width:10),
-                                        InkWell(
-                                          onTap:(){
+                                      ))
+                                          .toList(),
+                                      validator: (value) {
+                                        if (value == null) {
+                                          return '지역을 골라주세요.';
+                                        }
+                                      },
+                                      onChanged: (value) {
+                                        if (value == "글쓰기") {
 
-                                          },
-                                          child: Container(
-                                            width:100,
-                                            height:35,
-                                            decoration:BoxDecoration(
-                                              color:Color(0xFF506AB4),
-                                              borderRadius: BorderRadius.circular(5),
+                                        } else if (value == "구독정보") {
+
+                                        }
+                                        //Do something when changing the item if you want.
+                                      },
+                                      onSaved: (value) {
+                                        selectedValue = value.toString();
+                                      },
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width:25),
+                                Container(
+                                  width:60,
+                                  height:40,
+                                  decoration: BoxDecoration(
+                                      color:Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+                                      border: Border.all(
+                                        width:1,
+                                        color:Color(0xFFcccccc),
+                                      )
+                                  ),
+                                  child: Center(
+                                    child: Text('회원상태',
+                                      style:TextStyle(
+                                        fontSize:12,
+                                        fontFamily: 'NanumSquareB',
+                                      ),
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(width:5),
+
+                                RadioGroup(
+                                  controller: myController,
+                                  values: ["전체", "남자", "여자"],
+                                  indexOfDefault: 0,
+                                  orientation: RadioGroupOrientation.Horizontal,
+                                  decoration: RadioGroupDecoration(
+                                    spacing: 4.0,
+                                    labelStyle: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                    activeColor: Color(0xFF3B4E84),
+                                  ),
+                                ),
+                                SizedBox(width:15),
+
+                                Container(
+                                  width:60,
+                                  height:40,
+                                  decoration: BoxDecoration(
+                                      color:Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+                                      border: Border.all(
+                                        width:1,
+                                        color:Color(0xFFcccccc),
+                                      )
+                                  ),
+                                  child: Center(
+                                    child: Text('가입일',
+                                      style:TextStyle(
+                                        fontSize:12,
+                                        fontFamily: 'NanumSquareB',
+                                      ),
+                                    ),
+                                  ),
+                                ),
+
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          InkWell(
+                                            onTap: () => _selectDate(context),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: <Widget>[
+                                                Container(
+                                                  child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:17,),
+                                                ),
+                                                SizedBox(
+                                                  width: 15.0,
+                                                ),
+                                                Text(
+                                                  "${selectedDate.toLocal()}".split(' ')[0],
+                                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                                                ),
+                                              ],
                                             ),
-                                            child: Center(
-                                              child: Text('검색 초기화',
-                                                  style:TextStyle(
-                                                    color:Colors.white,
-                                                    fontFamily: 'NanumSquareR',
-                                                    fontSize:14,
-                                                  )
+                                          ),
+
+                                          SizedBox(width: 20.0,),
+
+                                          Text('~'),
+
+                                          SizedBox(width: 20.0,),
+
+                                          InkWell(
+                                            onTap: () => _selectDate2(context),
+                                            child: Container(
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: <Widget>[
+                                                  Container(
+                                                    child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:12,),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 15.0,
+                                                  ),
+                                                  Text(
+                                                    "${selectedDate2.toLocal()}".split(' ')[0],
+                                                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ),
+
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    InkWell(
+                                      onTap:(){},
+                                      child: Container(
+                                        width:50,
+                                        height:25,
+                                        decoration:BoxDecoration(
+                                          color:Color(0xFF506AB4),
+                                          borderRadius: BorderRadius.circular(5),
                                         ),
-                                      ],
+                                        child: Center(
+                                          child: Text('검색',
+                                              style:TextStyle(
+                                                color:Colors.white,
+                                                fontFamily: 'NanumSquareR',
+                                                fontSize:12,
+                                              )
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(width:10),
+                                    InkWell(
+                                      onTap:(){
+
+                                      },
+                                      child: Container(
+                                        width:100,
+                                        height:25,
+                                        decoration:BoxDecoration(
+                                          color:Color(0xFF506AB4),
+                                          borderRadius: BorderRadius.circular(5),
+                                        ),
+                                        child: Center(
+                                          child: Text('검색 초기화',
+                                              style:TextStyle(
+                                                color:Colors.white,
+                                                fontFamily: 'NanumSquareR',
+                                                fontSize:12,
+                                              )
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),

@@ -583,7 +583,7 @@ class _MainPageState extends State<MainPage> {
                                 child: Center(
                                   child: Text('통합검색',
                                     style:TextStyle(
-                                      fontSize:13,
+                                      fontSize:12,
                                       fontFamily: 'NanumSquareB',
                                     ),
                                   ),
@@ -592,7 +592,7 @@ class _MainPageState extends State<MainPage> {
                               Container(
                                 alignment : Alignment.center,
                                 margin: EdgeInsets.only(left: 5, right: 15),
-                                width: 150,
+                                width: 100,
                                 height: 40,
                                 decoration: BoxDecoration(
                                   color: Color(0xFFffffff),
@@ -616,7 +616,7 @@ class _MainPageState extends State<MainPage> {
                               ),
                               SizedBox(width:10),
                               Container(
-                                width:80,
+                                width:60,
                                 height:40,
                                 decoration: BoxDecoration(
                                     color:Colors.white,
@@ -629,7 +629,7 @@ class _MainPageState extends State<MainPage> {
                                 child: Center(
                                   child: Text('이용횟수',
                                     style:TextStyle(
-                                      fontSize:13,
+                                      fontSize:12,
                                       fontFamily: 'NanumSquareB',
                                     ),
                                   ),
@@ -637,7 +637,7 @@ class _MainPageState extends State<MainPage> {
                               ),
                               SizedBox(width:5),
                               Container(
-                                width: 120,
+                                width: 100,
                                 height: 40,
                                 decoration:BoxDecoration(
                                     color:Colors.white,
@@ -711,7 +711,7 @@ class _MainPageState extends State<MainPage> {
                               ),
                               SizedBox(width:25),
                               Container(
-                                width:80,
+                                width:60,
                                 height:40,
                                 decoration: BoxDecoration(
                                     color:Colors.white,
@@ -724,7 +724,7 @@ class _MainPageState extends State<MainPage> {
                                 child: Center(
                                   child: Text('회원상태',
                                     style:TextStyle(
-                                      fontSize:13,
+                                      fontSize:12,
                                       fontFamily: 'NanumSquareB',
                                     ),
                                   ),
@@ -739,7 +739,7 @@ class _MainPageState extends State<MainPage> {
                                 indexOfDefault: 0,
                                 orientation: RadioGroupOrientation.Horizontal,
                                 decoration: RadioGroupDecoration(
-                                  spacing: 5.0,
+                                  spacing: 4.0,
                                   labelStyle: TextStyle(
                                     color: Colors.black,
                                   ),
@@ -762,7 +762,7 @@ class _MainPageState extends State<MainPage> {
                                 child: Center(
                                   child: Text('가입일',
                                     style:TextStyle(
-                                      fontSize:13,
+                                      fontSize:12,
                                       fontFamily: 'NanumSquareB',
                                     ),
                                   ),
@@ -789,7 +789,7 @@ class _MainPageState extends State<MainPage> {
                                               ),
                                               Text(
                                                 "${selectedDate.toLocal()}".split(' ')[0],
-                                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                                                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                                               ),
                                             ],
                                           ),
@@ -808,14 +808,14 @@ class _MainPageState extends State<MainPage> {
                                               mainAxisSize: MainAxisSize.min,
                                               children: <Widget>[
                                                 Container(
-                                                  child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:17,),
+                                                  child: Icon(Icons.calendar_today, color:Color(0xFF025595), size:12,),
                                                 ),
                                                 SizedBox(
                                                   width: 15.0,
                                                 ),
                                                 Text(
                                                   "${selectedDate2.toLocal()}".split(' ')[0],
-                                                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                                                 ),
                                               ],
                                             ),
@@ -833,7 +833,7 @@ class _MainPageState extends State<MainPage> {
                                     onTap:(){},
                                     child: Container(
                                         width:50,
-                                      height:35,
+                                      height:25,
                                       decoration:BoxDecoration(
                                         color:Color(0xFF506AB4),
                                         borderRadius: BorderRadius.circular(5),
@@ -843,7 +843,7 @@ class _MainPageState extends State<MainPage> {
                                             style:TextStyle(
                                               color:Colors.white,
                                               fontFamily: 'NanumSquareR',
-                                              fontSize:14,
+                                              fontSize:12,
                                             )
                                         ),
                                       ),
@@ -856,17 +856,17 @@ class _MainPageState extends State<MainPage> {
                                     },
                                     child: Container(
                                       width:100,
-                                      height:35,
+                                      height:25,
                                       decoration:BoxDecoration(
                                         color:Color(0xFF506AB4),
                                         borderRadius: BorderRadius.circular(5),
                                       ),
                                       child: Center(
-                                        child: Text('검색 초기2화',
+                                        child: Text('검색 초기화',
                                             style:TextStyle(
                                               color:Colors.white,
                                               fontFamily: 'NanumSquareR',
-                                              fontSize:14,
+                                              fontSize:12,
                                             )
                                         ),
                                       ),

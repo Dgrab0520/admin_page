@@ -470,10 +470,12 @@ class _SettingPageState extends State<SettingPage> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               SizedBox(height:15),
-                                              Text('월별 이용자',
-                                                style:TextStyle(
-                                                  fontSize:15,
-                                                  fontFamily: 'NanumSquareEB',
+                                              Center(
+                                                child: Text('월별 이용자',
+                                                  style:TextStyle(
+                                                    fontSize:15,
+                                                    fontFamily: 'NanumSquareEB',
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(height:30),
@@ -503,11 +505,11 @@ class _SettingPageState extends State<SettingPage> {
                                       child: Padding(
                                         padding: EdgeInsets.only(
                                           left: MediaQuery.of(context).size.width / 30,
-                                          right: MediaQuery.of(context).size.width / 70,
+                                          right: MediaQuery.of(context).size.width / 30,
                                           bottom: MediaQuery.of(context).size.width / 30,
                                         ),
                                         child: Container(
-                                          padding: EdgeInsets.all(10),
+                                          padding: EdgeInsets.all(5),
                                           width:400,
                                           height:180,
                                           decoration:BoxDecoration(
@@ -515,8 +517,8 @@ class _SettingPageState extends State<SettingPage> {
                                             borderRadius: BorderRadius.circular(5),
                                           ),
                                           child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
                                               SizedBox(height:15),
                                               Text('신규가입자',
@@ -528,11 +530,13 @@ class _SettingPageState extends State<SettingPage> {
                                               ),
                                               SizedBox(height:20),
                                               Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
                                                   Container(
                                                     child: Text('+',
                                                       style:TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                     ),
@@ -543,7 +547,7 @@ class _SettingPageState extends State<SettingPage> {
                                                       begin: 10,
                                                       end: 255,
                                                       style: TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                       duration: Duration(seconds: 2),
@@ -553,33 +557,30 @@ class _SettingPageState extends State<SettingPage> {
                                                 ],
                                               ),
                                               SizedBox(height:15),
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
-                                                  Column(
-                                                    children: [
-                                                      Icon(Icons.arrow_upward_outlined, color:Color(0xFF798BBF),size:14,),
-                                                      SizedBox(width:3),
-                                                      Container(
-                                                        child: Text('5.27%',
-                                                          style:TextStyle(
-                                                            fontSize:15,
-                                                            color:Color(0xFF798BBF),
-                                                            fontFamily: 'NanumSquareB',
-                                                          ),
-                                                        ),
+                                                  Icon(Icons.arrow_upward_outlined, color:Color(0xFF798BBF),size:14,),
+                                                  SizedBox(width:3),
+                                                  Container(
+                                                    child: Text('5.27%',
+                                                      style:TextStyle(
+                                                        fontSize:15,
+                                                        color:Color(0xFF798BBF),
+                                                        fontFamily: 'NanumSquareB',
                                                       ),
-                                                      SizedBox(width:10),
-                                                      Container(
-                                                        child: Text('전월대비',
-                                                          style:TextStyle(
-                                                              fontSize:13,
-                                                              fontFamily: 'NanumSquareR',
-                                                              color:Color(0xFF797A7D)
-                                                          ),
-                                                        ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(height:10),
+                                                  Container(
+                                                    child: Text('전월대비',
+                                                      style:TextStyle(
+                                                          fontSize:13,
+                                                          fontFamily: 'NanumSquareR',
+                                                          color:Color(0xFF797A7D)
                                                       ),
-                                                    ],
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -592,11 +593,11 @@ class _SettingPageState extends State<SettingPage> {
                                       child: Padding(
                                         padding: EdgeInsets.only(
                                           left: MediaQuery.of(context).size.width / 30,
-                                          right: MediaQuery.of(context).size.width / 70,
+                                          right: MediaQuery.of(context).size.width / 30,
                                           bottom: MediaQuery.of(context).size.width / 30,
                                         ),
                                         child: Container(
-                                          padding: EdgeInsets.all(10),
+                                          padding: EdgeInsets.all(5),
                                           width:400,
                                           height:180,
                                           decoration:BoxDecoration(
@@ -604,8 +605,8 @@ class _SettingPageState extends State<SettingPage> {
                                             borderRadius: BorderRadius.circular(5),
                                           ),
                                           child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
                                               SizedBox(height:15),
                                               Text('신규가입자',
@@ -617,11 +618,13 @@ class _SettingPageState extends State<SettingPage> {
                                               ),
                                               SizedBox(height:20),
                                               Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
                                                   Container(
                                                     child: Text('+',
                                                       style:TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                     ),
@@ -632,7 +635,7 @@ class _SettingPageState extends State<SettingPage> {
                                                       begin: 10,
                                                       end: 255,
                                                       style: TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                       duration: Duration(seconds: 2),
@@ -642,33 +645,30 @@ class _SettingPageState extends State<SettingPage> {
                                                 ],
                                               ),
                                               SizedBox(height:15),
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
-                                                  Column(
-                                                    children: [
-                                                      Icon(Icons.arrow_upward_outlined, color:Color(0xFF798BBF),size:14,),
-                                                      SizedBox(width:3),
-                                                      Container(
-                                                        child: Text('5.27%',
-                                                          style:TextStyle(
-                                                            fontSize:15,
-                                                            color:Color(0xFF798BBF),
-                                                            fontFamily: 'NanumSquareB',
-                                                          ),
-                                                        ),
+                                                  Icon(Icons.arrow_upward_outlined, color:Color(0xFF798BBF),size:14,),
+                                                  SizedBox(width:3),
+                                                  Container(
+                                                    child: Text('5.27%',
+                                                      style:TextStyle(
+                                                        fontSize:15,
+                                                        color:Color(0xFF798BBF),
+                                                        fontFamily: 'NanumSquareB',
                                                       ),
-                                                      SizedBox(width:10),
-                                                      Container(
-                                                        child: Text('전월대비',
-                                                          style:TextStyle(
-                                                              fontSize:13,
-                                                              fontFamily: 'NanumSquareR',
-                                                              color:Color(0xFF797A7D)
-                                                          ),
-                                                        ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(height:10),
+                                                  Container(
+                                                    child: Text('전월대비',
+                                                      style:TextStyle(
+                                                          fontSize:13,
+                                                          fontFamily: 'NanumSquareR',
+                                                          color:Color(0xFF797A7D)
                                                       ),
-                                                    ],
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -681,11 +681,11 @@ class _SettingPageState extends State<SettingPage> {
                                       child: Padding(
                                         padding: EdgeInsets.only(
                                           left: MediaQuery.of(context).size.width / 30,
-                                          right: MediaQuery.of(context).size.width / 70,
+                                          right: MediaQuery.of(context).size.width / 30,
                                           bottom: MediaQuery.of(context).size.width / 30,
                                         ),
                                         child: Container(
-                                          padding: EdgeInsets.all(10),
+                                          padding: EdgeInsets.all(5),
                                           width:400,
                                           height:180,
                                           decoration:BoxDecoration(
@@ -693,8 +693,8 @@ class _SettingPageState extends State<SettingPage> {
                                             borderRadius: BorderRadius.circular(5),
                                           ),
                                           child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
                                               SizedBox(height:15),
                                               Text('탈퇴자',
@@ -706,11 +706,13 @@ class _SettingPageState extends State<SettingPage> {
                                               ),
                                               SizedBox(height:20),
                                               Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
                                                   Container(
                                                     child: Text('-',
                                                       style:TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                     ),
@@ -721,7 +723,7 @@ class _SettingPageState extends State<SettingPage> {
                                                       begin: 10,
                                                       end: 15,
                                                       style: TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                       duration: Duration(seconds: 2),
@@ -731,33 +733,30 @@ class _SettingPageState extends State<SettingPage> {
                                                 ],
                                               ),
                                               SizedBox(height:15),
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
-                                                  Column(
-                                                    children: [
-                                                      Icon(Icons.arrow_upward_outlined, color:Color(0xFF798BBF),size:14,),
-                                                      SizedBox(width:3),
-                                                      Container(
-                                                        child: Text('5.27%',
-                                                          style:TextStyle(
-                                                            fontSize:15,
-                                                            color:Color(0xFF798BBF),
-                                                            fontFamily: 'NanumSquareB',
-                                                          ),
-                                                        ),
+                                                  Icon(Icons.arrow_downward_outlined, color:Colors.red,size:14,),
+                                                  SizedBox(width:3),
+                                                  Container(
+                                                    child: Text('5.27%',
+                                                      style:TextStyle(
+                                                        fontSize:15,
+                                                        color:Colors.red,
+                                                        fontFamily: 'NanumSquareB',
                                                       ),
-                                                      SizedBox(width:10),
-                                                      Container(
-                                                        child: Text('전월대비',
-                                                          style:TextStyle(
-                                                              fontSize:13,
-                                                              fontFamily: 'NanumSquareR',
-                                                              color:Color(0xFF797A7D)
-                                                          ),
-                                                        ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(height:10),
+                                                  Container(
+                                                    child: Text('전월대비',
+                                                      style:TextStyle(
+                                                          fontSize:13,
+                                                          fontFamily: 'NanumSquareR',
+                                                          color:Color(0xFF797A7D)
                                                       ),
-                                                    ],
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -770,11 +769,11 @@ class _SettingPageState extends State<SettingPage> {
                                       child: Padding(
                                         padding: EdgeInsets.only(
                                           left: MediaQuery.of(context).size.width / 30,
-                                          right: MediaQuery.of(context).size.width / 70,
+                                          right: MediaQuery.of(context).size.width / 30,
                                           bottom: MediaQuery.of(context).size.width / 30,
                                         ),
                                         child: Container(
-                                          padding: EdgeInsets.all(10),
+                                          padding: EdgeInsets.all(5),
                                           width:400,
                                           height:180,
                                           decoration:BoxDecoration(
@@ -782,8 +781,8 @@ class _SettingPageState extends State<SettingPage> {
                                             borderRadius: BorderRadius.circular(5),
                                           ),
                                           child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
                                               SizedBox(height:15),
                                               Text('재가입자',
@@ -795,11 +794,13 @@ class _SettingPageState extends State<SettingPage> {
                                               ),
                                               SizedBox(height:20),
                                               Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
                                                   Container(
                                                     child: Text('+',
                                                       style:TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                     ),
@@ -808,9 +809,9 @@ class _SettingPageState extends State<SettingPage> {
                                                   Container(
                                                     child: McCountingText(
                                                       begin: 10,
-                                                      end: 22,
+                                                      end: 25,
                                                       style: TextStyle(
-                                                        fontSize:22,
+                                                        fontSize:21,
                                                         fontFamily: 'NanumSquareB',
                                                       ),
                                                       duration: Duration(seconds: 2),
@@ -820,33 +821,30 @@ class _SettingPageState extends State<SettingPage> {
                                                 ],
                                               ),
                                               SizedBox(height:15),
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
-                                                  Column(
-                                                    children: [
-                                                      Icon(Icons.arrow_upward_outlined, color:Color(0xFF798BBF),size:14,),
-                                                      SizedBox(width:3),
-                                                      Container(
-                                                        child: Text('5.27%',
-                                                          style:TextStyle(
-                                                            fontSize:15,
-                                                            color:Color(0xFF798BBF),
-                                                            fontFamily: 'NanumSquareB',
-                                                          ),
-                                                        ),
+                                                  Icon(Icons.arrow_upward_outlined, color:Color(0xFF798BBF),size:14,),
+                                                  SizedBox(width:3),
+                                                  Container(
+                                                    child: Text('5.27%',
+                                                      style:TextStyle(
+                                                        fontSize:15,
+                                                        color:Color(0xFF798BBF),
+                                                        fontFamily: 'NanumSquareB',
                                                       ),
-                                                      SizedBox(width:10),
-                                                      Container(
-                                                        child: Text('전월대비',
-                                                          style:TextStyle(
-                                                              fontSize:13,
-                                                              fontFamily: 'NanumSquareR',
-                                                              color:Color(0xFF797A7D)
-                                                          ),
-                                                        ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(height:10),
+                                                  Container(
+                                                    child: Text('전월대비',
+                                                      style:TextStyle(
+                                                          fontSize:13,
+                                                          fontFamily: 'NanumSquareR',
+                                                          color:Color(0xFF797A7D)
                                                       ),
-                                                    ],
+                                                    ),
                                                   ),
                                                 ],
                                               ),
